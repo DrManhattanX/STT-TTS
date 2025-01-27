@@ -1,12 +1,11 @@
  
-from PySide6.QtCore import QSize, Qt
-from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QGridLayout, QLabel, QComboBox, QVBoxLayout
-from RealtimeSTT import AudioToTextRecorder
-from RealtimeTTS import TextToAudioStream, GTTSEngine ,SystemEngine, KokoroEngine
-from datetime import time
+from PySide6.QtCore import QSize, Qt, QTimer, QRunnable, Slot, Signal, QObject, QProcess, QThreadPool
+from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QPlainTextEdit, QLabel, QComboBox, QVBoxLayout
+import time
 from phonemizer.backend.espeak.wrapper import EspeakWrapper
 import pyaudio
 import sys
+import traceback
 _ESPEAK_LIBRARY = 'C:\Program Files\eSpeak NG\libespeak-ng.dll'
 EspeakWrapper.set_library(_ESPEAK_LIBRARY)
 #https://www.pythonguis.com/tutorials/pyside6-layouts/
@@ -15,27 +14,51 @@ EspeakWrapper.set_library(_ESPEAK_LIBRARY)
 
 
 if __name__ == '__main__':
+    class WorkerSignals(QObject):
+        finished = Signal()
+        error = Signal(tuple)
+        result = Signal(object)
+        progress = Signal(int)
+
+
+    class Worker(QRunnable):
+        def __init__(self, fn, *args, **kwargs):
+            super().__init__()
+
+            # Store constructor arguments (re-used for processing)
+            self.fn = fn
+            self.args = args
+            self.kwargs = kwargs
+            self.signals = WorkerSignals()
+
+        @Slot()
+        def run(self):
+            try:
+                result = self.fn(*self.args, **self.kwargs)
+            except:
+                traceback.print_exc()
+                exctype, value = sys.exc_info()[:2]
+                self.signals.error.emit((exctype, value, traceback.format_exc()))
+            else:
+                self.signals.result.emit(result)  # Return the result of the processing
+            finally:
+                self.signals.finished.emit()  # Done
     class MainWindow(QMainWindow):
         def __init__(self):
             super().__init__()
 
-            kokoro_root = "C:/Users/ty10r/Desktop/Projects/Python Stuff/Kokoro-82M"
-
-            self.engine = KokoroEngine(kokoro_root=kokoro_root,) # replace with your TTS engine
-            self.stream = TextToAudioStream(engine=self.engine) #fake cable output_device_index=15
-            self.engine.set_voice("am_michael")
-            self.recorder = AudioToTextRecorder(language="en",enable_realtime_transcription=True,silero_sensitivity=0.4,post_speech_silence_duration=0.2,min_gap_between_recordings=0.5)
-
-
-            self.setWindowTitle("My App")
-            self.button_is_checked = True
+            self.setWindowTitle("Kokoro Engine STTS")
+            
+            self.p = None
+            self.threadpool = QThreadPool()
 
             self.Voices = "am_michael"
-            self.Output = 1
+            self.Output = 15
             self.Input = 1
             self.Running = False
 
-            EngineLabel = QLabel("TTS Engine")
+            self.text = QPlainTextEdit()
+            self.text.setReadOnly(True)
 
             VoiceLabel = QLabel("TTS Voices (Kokoro)")
             VoiceSelectionBox = QComboBox()
@@ -54,7 +77,6 @@ if __name__ == '__main__':
 
             #LAYOUT STUFF
             layout = QVBoxLayout()
-            layout.addWidget(EngineLabel)
             layout.addWidget(VoiceLabel)
             layout.addWidget(VoiceSelectionBox)
             layout.addWidget(OutputCableLabel)
@@ -62,14 +84,12 @@ if __name__ == '__main__':
             layout.addWidget(InputCableLabel)
             layout.addWidget(InputCableSelectionBox)
             button1 = QPushButton("Start!")
-            button1.clicked.connect(self.mainloop)
+            button1.clicked.connect(self.startLoop)
             button2 = QPushButton("Kill!")
             button2.clicked.connect(self.killLoop)
-            button3 = QPushButton("diag!")
-            button3.clicked.connect(self.spitShit)
+            layout.addWidget(self.text)
             layout.addWidget(button1)
             layout.addWidget(button2)
-            layout.addWidget(button3)
 
             container = QWidget()
             container.setLayout(layout)
@@ -78,18 +98,22 @@ if __name__ == '__main__':
 
             # Set the central widget of the Window.
             self.setCentralWidget(container)
+        
+        def message(self, s):
+            self.text.appendPlainText(s)
+
         def setVoices(self, text):
             self.Voices = text
-            self.engine.set_voice(text)
             print(text)
+
         def setOutput(self, text):
-            self.Output = text
-            self.stream.output_device_index = str(text[:1])
+            self.Output = str(text[:1])
             print(text)
+
         def setInput(self, text):
-            self.Input = text
-            self.recorder.input_device_index = str(text[:1])
+            self.Input = str(text[:1])
             print(text)
+
         def getAudioDevices(self):
             p = pyaudio.PyAudio()
             info = p.get_host_api_info_by_index(0)
@@ -99,6 +123,7 @@ if __name__ == '__main__':
                 if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
                      Devices.append((str(i)+" - "+p.get_device_info_by_host_api_device_index(0, i).get('name')))
             return Devices
+        
         def getAllAudioDevices(self):
             p = pyaudio.PyAudio()
             info = p.get_host_api_info_by_index(0)
@@ -111,28 +136,42 @@ if __name__ == '__main__':
                 if (p.get_device_info_by_host_api_device_index(0, i).get('maxOutputChannels')) > 0:
                      Devices.append((str(i)+" - "+p.get_device_info_by_host_api_device_index(0, i).get('name')))
             return Devices
-        def process_text(self,text):
-            print(text)
-            if "command 47" in text:
-                self.Running = False
-                self.engine.shutdown()
-                self.recorder.shutdown()
-                print("should shut down now")
-            else:
-                self.stream.feed(text)
-                self.stream.play_async()
-        def mainloop(self):
-            print("Wait until it says 'speak now'")
-            self.Running = True
-            
-            while self.Running:
-                self.recorder.text(self.process_text)
+        
+        def startLoop(self):
+            if self.p is None:
+                self.p = QProcess()
+                self.p.readyReadStandardOutput.connect(self.handle_stdout)
+                self.p.readyReadStandardError.connect(self.handle_stderr)
+                self.p.finished.connect(self.process_finished)
+                
+                self.p.start("py -3.11", ['main.py', self.Voices, self.Output, self.Input])
+                
+                worker = Worker(self.statusLoop)
+                self.threadpool.start(worker)
+
+        def statusLoop(self):
+            self.message(str(self.p.state()))
+            while self.p.state() is not QProcess.Running:
+                self.message(str(self.p.state()))
+                time.sleep(5)
+            self.message("running")
+
+        def process_finished(self):
+            self.p = None
+
         def killLoop(self):
             self.Running = False
-        def spitShit(self):
-            print("Stream odi: "+str(self.stream.output_device_index))
-            print("Recorder odi: "+str(self.recorder.input_device_index))
-            print("Running: "+str(self.Running))
+            self.p.kill()
+
+        def handle_stderr(self):
+            data = self.p.readAllStandardError()
+            stderr = bytes(data).decode("utf8")
+            self.message(stderr)
+
+        def handle_stdout(self):
+            data = self.p.readAllStandardOutput()
+            stdout = bytes(data).decode("utf8")
+            self.message(stdout)
 
     app = QApplication(sys.argv)
     window = MainWindow()

@@ -1,0 +1,5 @@
+RealtimeSTT
+torch==2.5.1+cu121 
+--index-url https://download.pytorch.org/whl/cu121
+torchaudio==2.5.1 
+--index-url https://download.pytorch.org/whl/cu121

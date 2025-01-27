@@ -14,9 +14,21 @@ EspeakWrapper.set_library(_ESPEAK_LIBRARY)
 if __name__ == '__main__':
     kokoro_root = "C:/Users/ty10r/Desktop/Projects/Python Stuff/Kokoro-82M"
 
+    #vars
+    if len(sys.argv) > 1:
+        voiceARG = str(sys.argv[1])
+        outputARG = int(sys.argv[2])
+        inputARG = int(sys.argv[3])
+    else:
+        voiceARG = "am_michael"
+        outputARG = 15
+        inputARG = 1
+
+    Running = False
     engine = KokoroEngine(kokoro_root=kokoro_root,) # replace with your TTS engine
-    stream = TextToAudioStream(engine=engine) #fake cable output_device_index=15
-    engine.set_voice("bm_george")
+    stream = TextToAudioStream(engine=engine,output_device_index=outputARG) #fake cable output_device_index=15
+    recorder = AudioToTextRecorder(language="en",enable_realtime_transcription=True,silero_sensitivity=0.4,post_speech_silence_duration=0.2,min_gap_between_recordings=0.5,input_device_index=inputARG)
+    engine.set_voice(voiceARG)
         # Pick one of: 
         # "af_nicole", 
         # "af",
@@ -34,16 +46,20 @@ if __name__ == '__main__':
     def process_text(text):
         print(text)
         if "command 47" in text:
-            quit()
+            engine.shutdown()
+            recorder.shutdown()
+            print("should shut down now")
+            global Running
+            Running = False
         else:
             stream.feed(text)
             stream.play_async()
         
     def mainloop():
         print("Wait until it says 'speak now'")
-        recorder = AudioToTextRecorder(language="en",enable_realtime_transcription=True,silero_sensitivity=0.4,post_speech_silence_duration=0.2,min_gap_between_recordings=0.5)
-
-        while True:
+        global Running
+        Running = True
+        while Running:
             recorder.text(process_text)
                 
     def test():
@@ -51,6 +67,7 @@ if __name__ == '__main__':
         stream.play()
             
 
-    #mainloop()
+    mainloop()
+    exit()
     #test()
     #engine.shutdown()
