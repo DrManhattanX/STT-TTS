@@ -2415,3 +2415,307 @@ RuntimeError: FFmpeg extension is not available.
 2025-01-23 16:59:32.339 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
 2025-01-23 16:59:55.011 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 103. Discarding old audio chunks.
 2025-01-23 17:05:18.189 - RealTimeSTT: root - DEBUG - Debug: Caught exception in main try block
+2025-01-27 01:41:46.689 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 01:41:46.706 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 01:41:46.710 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 01:41:46.715 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 01:41:46.783 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 01:41:47.184 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 01:41:47.184 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 01:41:47.184 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 01:41:47.626 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 01:41:47.628 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 01:41:47.628 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 01:42:00.280 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 01:42:00.301 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 01:50:56.366 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 01:50:56.374 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 01:50:56.378 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 01:50:56.380 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 01:50:56.499 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 01:50:56.711 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 01:50:56.711 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 01:50:56.711 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 01:50:57.398 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 01:50:57.399 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 01:50:57.399 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 01:51:08.570 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 01:51:08.592 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 01:51:41.502 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 01:51:41.508 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 01:51:41.513 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 01:51:41.516 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 01:51:41.603 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 01:51:41.806 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 01:51:41.807 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 01:51:41.807 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 01:51:42.072 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 01:51:42.073 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 01:51:42.074 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 01:51:53.718 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 01:51:53.721 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 01:52:54.026 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 01:52:54.026 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 01:52:58.002 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 01:53:00.116 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 01:53:00.116 - RealTimeSTT: root - INFO - recording started
+2025-01-27 01:53:00.116 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 01:53:00.116 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 01:53:00.317 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 01:53:00.623 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello?
+2025-01-27 01:53:00.824 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 27136
+2025-01-27 01:53:00.829 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 01:53:00.829 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 01:53:00.849 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello?
+2025-01-27 01:53:00.860 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 01:53:00.861 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 01:53:00.862 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 01:53:00.888 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 01:53:01.067 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.20 seconds
+2025-01-27 01:53:01.068 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 01:53:01.068 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 01:53:01.068 - RealTimeSTT: root - INFO - stream start
+2025-01-27 01:53:01.069 - RealTimeSTT: root - DEBUG - Opening stream for wave audio chunks, pyFormat: 8, pyChannels: 1, pySampleRate: 24000
+2025-01-27 01:53:01.069 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 01:53:01.131 - RealTimeSTT: root - INFO - Time to split sentences: 0.05012822151184082
+2025-01-27 01:53:01.245 - RealTimeSTT: root - INFO - Audio stream start, latency to first chunk: 0.18s
+2025-01-27 01:53:02.817 - RealTimeSTT: root - INFO - stream stop
+2025-01-27 01:53:18.228 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 01:53:18.228 - RealTimeSTT: root - INFO - recording started
+2025-01-27 01:53:18.228 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 01:53:18.228 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 01:53:18.436 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 01:53:18.511 - RealTimeSTT: root - DEBUG - Realtime text detected:  Thanks.
+2025-01-27 01:53:18.712 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 24064
+2025-01-27 01:53:18.790 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute.
+2025-01-27 01:53:18.991 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 28160
+2025-01-27 01:53:19.077 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command.
+2025-01-27 01:53:19.278 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 33280
+2025-01-27 01:53:19.370 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute commandful
+2025-01-27 01:53:19.571 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 37376
+2025-01-27 01:53:19.667 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 40s
+2025-01-27 01:53:19.868 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 42496
+2025-01-27 01:53:20.042 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 47
+2025-01-27 01:53:20.217 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 01:53:20.217 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 01:53:20.242 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 0
+2025-01-27 01:53:20.244 - RealTimeSTT: root - DEBUG - Realtime text detected: 
+2025-01-27 01:53:20.271 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 01:53:20.272 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 01:53:20.276 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 01:53:20.283 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 01:53:20.363 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.09 seconds
+2025-01-27 01:53:20.364 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 01:53:20.364 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 01:53:20.365 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:02:09.057 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 02:02:09.063 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 02:02:09.066 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 02:02:09.069 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 02:02:09.188 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 02:02:09.403 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 02:02:09.403 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 02:02:09.403 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 02:02:09.788 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 02:02:09.789 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 02:02:09.790 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 02:02:21.229 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 02:02:21.258 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 02:05:51.063 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 02:05:51.067 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 02:05:51.071 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 02:05:51.074 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 02:05:51.200 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 02:05:51.382 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 02:05:51.382 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 02:05:51.382 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 02:05:51.811 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 02:05:51.812 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 02:05:51.813 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 02:06:02.147 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 02:06:02.168 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 02:06:48.718 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:06:48.718 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:06:49.008 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:06:52.780 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 02:06:52.780 - RealTimeSTT: root - INFO - recording started
+2025-01-27 02:06:52.780 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 02:06:52.780 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 02:06:53.000 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 02:06:53.158 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello.
+2025-01-27 02:06:53.359 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 26112
+2025-01-27 02:06:53.385 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello.
+2025-01-27 02:06:53.548 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 02:06:53.548 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 02:06:53.586 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 0
+2025-01-27 02:06:53.587 - RealTimeSTT: root - DEBUG - Realtime text detected: 
+2025-01-27 02:06:53.621 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 02:06:53.621 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 02:06:53.635 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 02:06:53.668 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 02:06:53.923 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.30 seconds
+2025-01-27 02:06:53.924 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:06:53.924 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:06:53.925 - RealTimeSTT: root - INFO - stream start
+2025-01-27 02:06:53.925 - RealTimeSTT: root - DEBUG - Opening stream for wave audio chunks, pyFormat: 8, pyChannels: 1, pySampleRate: 24000
+2025-01-27 02:06:53.925 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:06:53.950 - RealTimeSTT: root - INFO - Time to split sentences: 0.01353311538696289
+2025-01-27 02:06:54.155 - RealTimeSTT: root - INFO - Audio stream start, latency to first chunk: 0.23s
+2025-01-27 02:06:55.698 - RealTimeSTT: root - INFO - stream stop
+2025-01-27 02:07:01.928 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 02:07:01.928 - RealTimeSTT: root - INFO - recording started
+2025-01-27 02:07:01.928 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 02:07:01.928 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 02:07:02.145 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 02:07:02.283 - RealTimeSTT: root - DEBUG - Realtime text detected:  exit.
+2025-01-27 02:07:02.484 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 25088
+2025-01-27 02:07:02.619 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute.
+2025-01-27 02:07:02.820 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 30208
+2025-01-27 02:07:02.895 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command.
+2025-01-27 02:07:03.096 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 35328
+2025-01-27 02:07:03.169 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 40
+2025-01-27 02:07:03.370 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 39424
+2025-01-27 02:07:03.445 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 40 stuff
+2025-01-27 02:07:03.646 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 43520
+2025-01-27 02:07:03.722 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 47
+2025-01-27 02:07:03.789 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 02:07:03.789 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 02:07:03.853 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 02:07:03.854 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 02:07:03.854 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 02:07:03.908 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 02:07:03.923 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 0
+2025-01-27 02:07:03.925 - RealTimeSTT: root - DEBUG - Realtime text detected: 
+2025-01-27 02:07:03.940 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.09 seconds
+2025-01-27 02:07:03.941 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:03.941 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:03.941 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:30.531 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-27 02:07:30.531 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-27 02:07:30.547 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-27 02:07:31.910 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-27 02:07:32.001 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-27 02:07:32.256 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-27 02:07:40.561 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:40.561 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:40.561 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:40.561 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:40.561 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:40.562 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:40.562 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:40.813 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:40.813 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:40.813 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:40.814 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:41.065 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:41.065 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:41.066 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:41.066 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:41.317 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:41.317 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:41.318 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:41.318 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:41.569 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:41.569 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:41.570 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:41.570 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:41.821 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:41.822 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:41.822 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:41.823 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:42.073 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:42.073 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:42.074 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:42.074 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:42.326 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:42.326 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:42.327 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:42.327 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:42.577 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:42.577 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:42.578 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:42.578 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:42.829 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:42.829 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:42.830 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:42.830 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:43.081 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:07:43.081 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:07:43.082 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:07:43.082 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:07:43.333 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-27 02:07:43.333 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-27 02:09:16.834 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-27 02:09:16.839 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-27 02:09:16.842 - RealTimeSTT: root - INFO - Initializing faster_whisper realtime transcription model tiny, default device: cuda, compute type: default, device index: 0, download root: None
+2025-01-27 02:09:16.845 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-27 02:09:16.946 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1921
+2025-01-27 02:09:17.123 - RealTimeSTT: root - DEBUG - Faster_whisper realtime speech to text transcription model initialized successfully
+2025-01-27 02:09:17.124 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-27 02:09:17.124 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-27 02:09:17.523 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-27 02:09:17.525 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-27 02:09:17.525 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-27 02:09:27.934 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-27 02:09:27.936 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-27 02:09:43.998 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:09:43.998 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:09:44.293 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:09:46.973 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 02:09:46.973 - RealTimeSTT: root - INFO - recording started
+2025-01-27 02:09:46.973 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 02:09:46.973 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 02:09:47.187 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 02:09:47.342 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello?
+2025-01-27 02:09:47.542 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 25088
+2025-01-27 02:09:47.571 - RealTimeSTT: root - DEBUG - Realtime text detected:  Hello?
+2025-01-27 02:09:47.684 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 02:09:47.685 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 02:09:47.752 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 02:09:47.753 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 02:09:47.767 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 02:09:47.772 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 0
+2025-01-27 02:09:47.773 - RealTimeSTT: root - DEBUG - Realtime text detected: 
+2025-01-27 02:09:47.804 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 02:09:48.063 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.31 seconds
+2025-01-27 02:09:48.064 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:09:48.064 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:09:48.064 - RealTimeSTT: root - INFO - stream start
+2025-01-27 02:09:48.065 - RealTimeSTT: root - DEBUG - Opening stream for wave audio chunks, pyFormat: 8, pyChannels: 1, pySampleRate: 24000
+2025-01-27 02:09:48.065 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:09:48.091 - RealTimeSTT: root - INFO - Time to split sentences: 0.01352834701538086
+2025-01-27 02:09:48.185 - RealTimeSTT: root - INFO - Audio stream start, latency to first chunk: 0.12s
+2025-01-27 02:09:49.664 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-27 02:09:49.664 - RealTimeSTT: root - INFO - recording started
+2025-01-27 02:09:49.664 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-27 02:09:49.664 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-27 02:09:49.766 - RealTimeSTT: root - INFO - stream stop
+2025-01-27 02:09:49.883 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 19968
+2025-01-27 02:09:49.948 - RealTimeSTT: root - DEBUG - Realtime text detected:  x again.
+2025-01-27 02:09:50.149 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 24064
+2025-01-27 02:09:50.215 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execuc...
+2025-01-27 02:09:50.416 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 28160
+2025-01-27 02:09:50.485 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command
+2025-01-27 02:09:50.686 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 33280
+2025-01-27 02:09:50.761 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 40s
+2025-01-27 02:09:50.961 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 37376
+2025-01-27 02:09:51.034 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 47
+2025-01-27 02:09:51.234 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 41472
+2025-01-27 02:09:51.312 - RealTimeSTT: root - DEBUG - Realtime text detected:  Execute command 47
+2025-01-27 02:09:51.392 - RealTimeSTT: root - INFO - recording stopped
+2025-01-27 02:09:51.393 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-27 02:09:51.428 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-27 02:09:51.429 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-27 02:09:51.447 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-27 02:09:51.452 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-27 02:09:51.513 - RealTimeSTT: root - DEBUG - Current realtime buffer size: 0
+2025-01-27 02:09:51.514 - RealTimeSTT: root - DEBUG - Realtime text detected: 
+2025-01-27 02:09:51.535 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.11 seconds
+2025-01-27 02:09:51.537 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-27 02:09:51.537 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-27 02:09:51.537 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-27 02:09:51.538 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-27 02:09:51.539 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2025-01-27 02:09:51.552 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-27 02:09:53.015 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-27 02:09:53.135 - RealTimeSTT: root - DEBUG - Finishing realtime thread
