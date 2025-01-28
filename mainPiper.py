@@ -11,6 +11,7 @@ if __name__ == '__main__':
     #Please follow links to install dependencies
     #https://github.com/KoljaB/RealtimeSTT
     #https://github.com/KoljaB/RealtimeTTS
+    #PIPER BUG https://github.com/KoljaB/RealtimeTTS/issues/250
 
     #vars
     if len(sys.argv) > 1:
