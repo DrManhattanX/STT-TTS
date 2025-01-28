@@ -1,17 +1,16 @@
-from RealtimeSTT import AudioToTextRecorder
-from RealtimeTTS import TextToAudioStream, GTTSEngine ,SystemEngine, KokoroEngine
-from datetime import time
-from phonemizer.backend.espeak.wrapper import EspeakWrapper
-import pyaudio
-import sys
-_ESPEAK_LIBRARY = 'C:\Program Files\eSpeak NG\libespeak-ng.dll'
-EspeakWrapper.set_library(_ESPEAK_LIBRARY)
-
-#Please follow links to install dependencies
-#https://github.com/KoljaB/RealtimeSTT
-#https://github.com/KoljaB/RealtimeTTS
-
 if __name__ == '__main__':
+    from RealtimeSTT import AudioToTextRecorder
+    from RealtimeTTS import TextToAudioStream, GTTSEngine ,SystemEngine, KokoroEngine
+    from datetime import time
+    from phonemizer.backend.espeak.wrapper import EspeakWrapper
+    import pyaudio
+    import sys
+    _ESPEAK_LIBRARY = 'C:\Program Files\eSpeak NG\libespeak-ng.dll'
+    EspeakWrapper.set_library(_ESPEAK_LIBRARY)
+
+    #Please follow links to install dependencies
+    #https://github.com/KoljaB/RealtimeSTT
+    #https://github.com/KoljaB/RealtimeTTS
     kokoro_root = "C:/Users/ty10r/Desktop/Projects/Python Stuff/Kokoro-82M"
 
     #vars
@@ -20,7 +19,7 @@ if __name__ == '__main__':
         outputARG = int(sys.argv[2])
         inputARG = int(sys.argv[3])
     else:
-        voiceARG = "am_michael"
+        voiceARG = "af_nicole"
         outputARG = 15
         inputARG = 1
 

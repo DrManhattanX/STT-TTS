@@ -16,12 +16,12 @@ class Window:
         self.Voicecombo.place(x = 20, y = 40)
 
         self.OutCableSBox = self.getAllAudioDevices()
-        self.OutCablecombo = ttk.Combobox(self.frame, values = self.VoiceSBox, state = "readonly")
+        self.OutCablecombo = ttk.Combobox(self.frame, values = self.OutCableSBox, state = "readonly")
         self.OutCablecombo.set("Pick an Option")
         self.OutCablecombo.place(x = 20, y = 80)
 
         self.InCableSBox = self.getAllAudioDevices()
-        self.InCablecombo = ttk.Combobox(self.frame, values = self.VoiceSBox, state = "readonly")
+        self.InCablecombo = ttk.Combobox(self.frame, values = self.InCableSBox, state = "readonly")
         self.InCablecombo.set("Pick an Option")
         self.InCablecombo.place(x = 20, y = 120)
     
